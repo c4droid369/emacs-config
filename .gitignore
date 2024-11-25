@@ -1,4 +1,6 @@
 auto-save-list/
 backups/
 eln-cache/
+eshell/
 straight/
+transient/

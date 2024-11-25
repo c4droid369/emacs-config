@@ -9,8 +9,7 @@
 (setq kill-whole-line t)
 
 ;; Tab
-(setq indent-tabs-mode nil)
-(setq-default tab-width 4)
+(setq-default indent-tabs-mode nil)
 
 ;; Parens pair
 (electric-pair-mode t)
