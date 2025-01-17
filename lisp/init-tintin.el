@@ -1,5 +1,4 @@
 ;; -*- lexical-binding: t -*-
-(use-package tintin-mode
-  :straight nil
-  :load-path "3rdparty/tintin-mode")
+(setup tintin-mode
+  (:load-from "3rdparty/tintin-mode"))
 (provide 'init-tintin)
