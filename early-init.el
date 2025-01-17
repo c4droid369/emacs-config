@@ -1,4 +1,8 @@
 ;; -*- lexical-binding: t -*-
+;; Performance
+(setq gc-cons-threshold most-positive-fixnum)
+(setq read-process-output-max (* 1024 1024))
+
 ;; Suppression startup speed
 (setq byte-compile-warnings '(not obsolete)
       warning-suppress-log-types '((comp) (bytecomp))
@@ -23,9 +27,6 @@
 (setq straight-cache-autoloads t
       straight-vc-git-default-clone-depth 1
       straight-check-for-modifications '(find-when-checking))
-
-;; Setup
-;; ()
 
 ;; Debug when encounting error
 (setq debug-on-error t)

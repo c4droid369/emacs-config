@@ -15,7 +15,6 @@
 (setq-default indent-tabs-mode nil
               tab-width 4
               standard-indent 4
-              indent-line-function 4
               lisp-indent-offset nil
               sgml-basic-offset 4
               electric-indent-inhibit nil)

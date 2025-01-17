@@ -7,6 +7,9 @@
 ;; Helper library
 (add-to-list 'load-path (expand-file-name "site-lisp" user-emacs-directory))
 
+;; Performance
+(require 'site-benchmarking)
+
 ;; System
 (require 'site-system)
 
