@@ -24,7 +24,7 @@
 (setup (:straight god-mode)
   (:option god-exempt-predicates nil
            god-exempt-major-modes nil)
-  (:hide-mode god-mode))
+  (:hide-mode god-local-mode))
 
 (setup (:straight evil-god-state)
   (:load-after god-mode evil)
