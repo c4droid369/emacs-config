@@ -1,11 +1,6 @@
 # Directory
-auto-save-list/
 backups/
 eln-cache/
-eshell/
+etc/
 straight/
-transient/
-
-# File
-recentf
-tramp
+var/

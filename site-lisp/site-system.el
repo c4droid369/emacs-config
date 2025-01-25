@@ -4,6 +4,8 @@
 
 (defvar is-mac? (eq system-type 'darwin))
 
+(defvar is-win? (eq system-type 'windows-nt))
+
 ;; Specific linux distro
 (defvar current-distro (or (and (eq system-type 'gnu/linux)
 								(file-exists-p "/etc/os-release")

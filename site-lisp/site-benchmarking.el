@@ -53,9 +53,4 @@ LOAD-DURATION is the time taken in milliseconds to load FEATURE.")
     (require-times-mode)
     (tabulated-list-revert)
     (display-buffer (current-buffer))))
-
-(defun show-init-time ()
-  (message "init completed in %.2fms"
-           (time-subtract-millis after-init-time before-init-time)))
-(add-hook 'after-init-hook 'show-init-time)
 (provide 'site-benchmarking)

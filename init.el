@@ -22,12 +22,10 @@
 ;; Emacs internal
 (require 'init-defaults)
 (require 'init-dired)
+(require 'init-eshell)
 
 ;; System
 (require 'init-shell)
-
-;; Misc
-(require 'init-misc)
 
 ;; Performance
 (require 'init-performance)
@@ -35,18 +33,23 @@
 ;; Keybinding
 (require 'init-vim)
 
+;; Misc
+(require 'init-misc)
+
 ;; Version control
 (require 'init-git)
 
 ;; Programming
+(require 'init-compilation)
 (require 'init-completion)
 (require 'init-eldoc)
 (require 'init-parens)
+(require 'init-helpful)
 
 (require 'init-direnv)
 
+(require 'init-elisp)
 (require 'init-scheme)
 (require 'init-haskell)
 (require 'init-tintin)
-
 (provide 'init)
