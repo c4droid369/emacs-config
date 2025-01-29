@@ -51,5 +51,4 @@
 (require 'init-elisp)
 (require 'init-scheme)
 (require 'init-haskell)
-(require 'init-tintin)
 (provide 'init)

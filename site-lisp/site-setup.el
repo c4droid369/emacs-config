@@ -73,7 +73,7 @@ This macro is not repeatable."
 This keyword can be used as NAME, and it will replace itself
 with the nondirectory part of PATH.
 If PATH does not exist, abort the evaluation."
-  :shorthard (lambda (args)
+  :shorthand (lambda (args)
                (intern (file-name-nondirectory (directory-file-name (cadr args)))))
   `(let ((path* (expand-file-name ,path)))
      (if (file-exists-p path*)
@@ -93,4 +93,11 @@ current mode."
                  (intern (format "%s-mode" mode)))))
     `(setq minor-mode-alist
            (delq (assq ',mode minor-mode-alist) minor-mode-alist))))
+
+;; Check for executables
+(defsetup :needs (executable)
+  "If EXECUTABLE is not in the path, stop here."
+  :repeatable 1
+  `(unless (executable-find ,executable)
+     ,(setup-quit)))
 (provide 'site-setup)
