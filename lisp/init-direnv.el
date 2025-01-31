@@ -1,5 +1,7 @@
 ;; -*- lexical-binding: t -*-
-(setup (:straight direnv)
-  (:needs "direnv")
+(use-package direnv
+  :straight t
+  :if (executable-find "direnv")
+  :config
   (direnv-mode))
 (provide 'init-direnv)

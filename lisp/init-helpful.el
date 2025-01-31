@@ -1,5 +1,8 @@
 ;; -*- lexical-binding: t -*-
-(setup (:straight helpful)
+(use-package helpful
+  :straight t
+  :demand t
+  :config
   (leader-def
     "h" '(:ignore t :wk "help")
     "hh" 'helpful-symbol

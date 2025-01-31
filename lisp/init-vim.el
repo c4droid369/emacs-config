@@ -1,41 +1,55 @@
 ;; -*- lexical-binding: t -*-
-(setup (:straight evil)
-  (:option evil-undo-system 'undo-redo
-           evil-want-integration t
-           evil-want-keybinding nil
-           evil-want-minibuffer t
-           evil-want-C-u-scroll t
-           evil-want-Y-yank-to-eol t
-           evil-split-window-below t
-           evil-vsplit-window-right t
-           evil-respect-visual-line-mode t)
+(use-package evil
+  :straight t
+  :demand t
+  :custom
+  (evil-undo-system 'undo-redo)
+  (evil-want-integration t)
+  (evil-want-keybinding nil)
+  (evil-want-minibuffer t)
+  (evil-want-C-u-scroll t)
+  (evil-want-Y-yank-to-eol t)
+  (evil-split-window-below t)
+  (evil-vsplit-window-right t)
+  (evil-respect-visual-line-mode t)
+  :init
   (evil-mode))
 
-(setup (:straight evil-collection)
-  (:load-after evil)
-  (evil-collection-init)
-  (:hide-mode evil-collection-unimpaired-mode))
+(use-package evil-collection
+  :straight t
+  :demand t
+  :after evil
+  :diminish evil-collection-unimpaired-mode
+  :init
+  (evil-collection-init))
 
-(setup (:straight evil-commentary)
-  (:load-after evil)
-  (:hide-mode evil-commentary-mode)
-  (:hook-into prog-mode))
+(use-package evil-commentary
+  :straight t
+  :after evil
+  :diminish
+  :hook
+  (prog-mode . evil-commentary-mode))
 
-(setup (:straight evil-surround)
-  (:load-after evil)
+(use-package evil-surround
+  :straight t
+  :after evil
+  :config
   (global-evil-surround-mode))
 
-(setup (:straight evil-org)
-  (:load-after evil org)
-  (:hook-into org-mode)
-  (:with-mode evil-org-mode
-    (:hook evil-org-set-key-theme))
-  (:require evil-org-agenda)
+(use-package evil-org
+  :straight t
+  :after (evil org)
+  :hook
+  (org-mode . evil-org-mode)
+  (evil-org-mode . evil-org-set-key-theme)
+  :config
   (evil-org-agenda-set-keys))
 
-(setup (:straight general)
+(use-package general
+  :straight t
+  :config
   (general-evil-setup t)
-
+  ;; Leader
   (general-create-definer leader-def
     :states '(normal motion emacs)
     :keymaps 'override
@@ -56,7 +70,7 @@
     "sp" 'straight-x-pull-all
     "sr" 'straight-remove-unused-repos
     "ss" 'straight-get-recipe)
-  
+  ;; Local leader
   (general-create-definer localleader-def
     :states '(normal motion emacs)
     :keymaps 'override

@@ -1,4 +1,6 @@
 ;; -*- lexical-binding: t -*-
-(setup (:straight rainbow-delimiters)
-  (:hook-into prog-mode))
+(use-package rainbow-delimiters
+  :straight t
+  :hook
+  (prog-mode . rainbow-delimiters-mode))
 (provide 'init-parens)

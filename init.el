@@ -2,19 +2,12 @@
 ;; Bootstrap code
 (add-to-list 'load-path (expand-file-name "bootstrap" user-emacs-directory))
 (require 'bootstrap-straight)
-(require 'bootstrap-setup)
 
 ;; Helper library
 (add-to-list 'load-path (expand-file-name "site-lisp" user-emacs-directory))
 
-;; Performance
-(require 'site-benchmarking)
-
 ;; System
 (require 'site-system)
-
-;; Package manager
-(require 'site-setup)
 
 ;; Plugin
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
@@ -32,9 +25,6 @@
 
 ;; Keybinding
 (require 'init-vim)
-
-;; Misc
-(require 'init-misc)
 
 ;; Version control
 (require 'init-git)

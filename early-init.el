@@ -56,7 +56,11 @@
 ;; Straight
 (setq straight-cache-autoloads t
       straight-vc-git-default-clone-depth 1
-      straight-check-for-modifications '(find-when-checking))
+      straight-check-for-modifications '(find-when-checking)
+      straight-use-package-by-default t)
+
+;; Use-package
+(setq use-package-expand-minimally (if (not init-file-debug) t nil))
 
 ;; Debug when encounting error
 (setq debug-on-error t)

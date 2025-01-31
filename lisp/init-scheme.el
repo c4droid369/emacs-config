@@ -1,3 +1,5 @@
 ;; -*- lexical-binding: t -*-
-(setup (:straight-when guix is-guix-system?))
+(use-package guix
+  :straight t
+  :if is-guix-system?)
 (provide 'init-scheme)

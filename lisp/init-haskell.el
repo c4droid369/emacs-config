@@ -1,3 +1,4 @@
 ;; -*- lexical-binding: t -*-
-(setup (:straight haskell-mode))
+(use-package haskell-mode
+  :straight t)
 (provide 'init-haskell)
