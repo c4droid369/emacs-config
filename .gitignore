@@ -2,5 +2,6 @@
 backups/
 eln-cache/
 etc/
+server/
 straight/
 var/
