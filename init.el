@@ -39,6 +39,9 @@
 ;; Version control
 (require 'init-git)
 
+;; Note taking
+(require 'init-org)
+
 ;; Programming
 (require 'init-compilation)
 (require 'init-completion)
