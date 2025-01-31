@@ -63,14 +63,4 @@
     :prefix "SPC m"
     :non-normal-prefix "C-SPC m")
   (localleader-def "" '(:ignore t :wk "mode")))
-
-(setup (:straight which-key)
-  (:load-after evil)
-  (:hide-mode which-key-mode)
-  (:option which-key-allow-evil-operators t
-           which-key-show-remaining-keys t
-           which-key-sort-order 'which-key-prefix-then-key-order)
-  (which-key-mode)
-  (which-key-setup-minibuffer)
-  (set-face-attribute 'which-key-local-map-description-face nil :weight 'bold))
 (provide 'init-vim)
