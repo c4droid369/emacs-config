@@ -43,6 +43,7 @@
   (org-mode . evil-org-mode)
   (evil-org-mode . evil-org-set-key-theme)
   :config
+  (require 'evil-org-agenda)
   (evil-org-agenda-set-keys))
 
 (use-package general
